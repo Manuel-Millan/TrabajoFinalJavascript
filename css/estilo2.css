@@ -1,0 +1,233 @@
+/*Sccs Importados */
+/*Contenido general*/
+html {
+    scroll-behavior: smooth; }
+  
+  
+  #cards{
+        min-width: 100%;
+  }
+  
+  footer {
+    grid-area: footer;
+    display: flex;
+    background-color: #212529;
+    justify-content: center;
+    padding: 2%;
+    align-content: center; }
+  
+  footer i {
+    font-size: 25px;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: 0.2s;
+    justify-self: left; }
+  
+  footer i:hover {
+    color: gray;
+    transition: 0.2s; }
+  
+  footer a {
+    text-decoration: none;
+    color: white;
+    font-family: verdana;
+    font-size: 25px;
+    transform: 0.2s; }
+  
+  footer a:hover {
+    color: gray;
+    transition: 0.2s; }
+  
+  .estiloDos {
+    color: darkslategray;
+    font-family: verdana;
+    font-size: 14px;
+    transition: 0.5s; }
+  
+  .estiloDos:hover {
+    font-family: verdana;
+    font-size: 20px; }
+  
+  p {
+    color: darkslategray;
+    font-family: verdana;
+    font-size: 15px;
+    font-weight: bold; }
+  
+  /* Fin conenido general */
+  /* Contacto */
+ 
+  
+ 
+  
+  button {
+    margin-bottom: 5%;
+    margin-top: 2%; }
+  
+  /* Contacto */
+  #mainContacto {
+    margin-left: 7%;
+    margin-right: 7%;
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    grid-template-areas: "contacto mapa"                         
+   "numeros numeros"; }
+  
+  a {
+    text-decoration: none;
+    color: #000000; }
+  
+  #mapa {
+    grid-area: mapa;
+    width: 95%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%; }
+  
+  iframe {
+    height: 100%;
+    width: 100%; }
+  
+  #contacto {
+    grid-area: contacto;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%; }
+  
+  h6 {
+    color: black;
+    font-family: verdana;
+    /* text-shadow: 2px 2px 4px #000000; */
+    font-size: 24px; }
+  
+  #botonEnviar {
+    margin-right: 3%; }
+  
+  .divContatco {
+    grid-area: links;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center; }
+  
+  .divItem {
+    padding: 1%;
+    float: initial; }
+  
+  span {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  
+  #whC {
+    color: #25d366;
+    font-size: 20px; }
+  
+  #telC {
+    color: burlywood;
+    font-size: 20px; }
+  
+  #mailC {
+    color: red;
+    font-size: 20px; }
+  
+  #faceC {
+    color: #4267b2;
+    font-size: 20px; }
+  
+  #twC {
+    color: #1da1f2;
+    font-size: 20px; }
+  
+  #instaC {
+    color: #fc466b;
+    font-size: 20px; }
+  
+  
+  
+  /* Fin contacto */
+  /* Medias Queries */
+  @media only screen and (min-width: 768px) {
+    #sectionGaleria {
+      display: grid;
+      grid-area: cartas;
+      grid-template-columns: repeat(1, 1, 1, 1);
+      grid-template-rows: repeat(1, 1);
+      grid-template-areas: "foto1 foto2 foto3 foto4"
+   "foto5 foto6 foto7 foto8"; }
+    #h2Servicios {
+      grid-area: titulos; } }
+  
+  @media only screen and (max-width: 768px) {
+    #sectionGaleria {
+      display: grid;
+      grid-area: cartas;
+      margin-top: 1%;
+      grid-template-columns: repeat(1, 1);
+      grid-template-rows: repeat(1, 1, 1, 1);
+      grid-template-areas: "foto1 foto2"
+   "foto3 foto4"
+   "foto5 foto6"
+   "foto7 foto8"; }
+    #mainContacto {
+      grid-area: contenido;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 4fr, 8fr, 1fr;
+      grid-template-areas: "contacto" 
+   "mapa"
+   "numeros"; }
+    #mapa {
+      grid-area: mapa;
+      width: 96%;
+      margin-left: 2%;
+      margin-right: 2%; }
+    .divContatco {
+      display: grid;
+      grid-area: links;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "whC Telc mailC"
+   "faceC twC instaC"; }
+    .cartas {
+      grid-area: contenido;
+      margin-bottom: 5%;
+      padding: 2%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "cardNovia card15"
+   "cardConvencion dj" 
+   "caternig cardOtros"; }
+    #h2Servicios {
+      grid-area: titulos; } }
+  
+  @media only screen and (max-width: 480px) {
+    #grilla {
+      grid-template-rows: auto;
+      grid-template-columns: 100%; }
+    #sectionGaleria {
+      display: grid;
+      margin-top: 1%;
+      grid-area: cartas;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(8, 1fr);
+      grid-template-areas: "foto1"
+   "foto2"
+   "foto3"
+   "foto4"
+   "foto5"
+   "foto6"
+   "foto7"
+   "foto8"; }
+    .divContatco {
+      display: grid;
+      grid-area: links;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "whC Telc"
+   "mailC faceC"
+   "twC instaC "; } }
+  
